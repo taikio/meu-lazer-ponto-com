@@ -305,7 +305,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   Carousel.DEFAULTS = {
     interval: 5000,
     pause: 'hover',
-    wrap: true
+    wrap: true,
+    visible: 1,
+    
   }
 
   Carousel.prototype.keydown = function (e) {

@@ -25,6 +25,21 @@
 
  	</style>
 
+ 	<script type="text/javascript">
+      $(function(){
+
+      	$('#carousel-inner').jCarouselLite({
+
+      		auto     : 1000,
+		    speed    : 1000,
+		    visible  : 1,
+
+      	})
+      })
+
+ 	</script>
+	
+
 	<title>Meu Lazer.com</title>
 </head>
 <body>
@@ -37,30 +52,52 @@
 
   
 
-   <div class="row" id="main-content">
-  <div class="well" align="center">
+  <div class="row" id="main-content">
+  	<div class="well" align="center">
   	<br><br><br>
+   	<div class="banner">
+   	  <section id="slide">
+   		  <section class="carousel slide" id="carrossel">
+   			   <div class="carousel-inner">
+   		
+                     
+   	                <?php
+                          include('model/DAO.php');
 
-   <div class="banner">
-   <section class="carousel slide" id="carrossel">
-   	<div class="carousel-inner">
+                           $busca = pg_query("SELECT * FROM anuncios");
+ 
+                           while ($result = pg_fetch_array($busca)) {
 
-   		<figure class="active item">
-   			<img src="model/img/cat-eyes.jpg" width="700" height="600">
-   			<figurecaption class="carousel-caption">
-   				<h4>adjfadjfadjf</h4>
-   				<p>dfadjfakjdf</p>
-   			</figurecaption>
-   		</figure>
-   	</div>
+                           $imagem = $result['nome'];   
+        	   
+       
+   	                 ?>
 
-   	<a href="#carrossel" class="carousel-control left" data-slide="prev">&lsaquo;</a>
-   <a href="#carrossel" class="carousel-control right" data-slide="next">&rsaquo;</a>
-   </section>  
-    </div>
+
+   	                 <figure class="active item">
+   						<img src="model/img/<?php echo $imagem; ?>" width="700" height="600">
+   						<figurecaption class="carousel-caption">
+   							<h4>adjfadjfadjf</h4>
+   							<p>dfadjfakjdf</p>
+   						</figurecaption> 
+   					</figure> 
+
+   					
+ 					<?php
+                        }
+                    ?>	
+                   
+				   	<a href="#carrossel" class="carousel-control left" data-slide="prev">&lsaquo;</a>
+   					<a href="#carrossel" class="carousel-control right" data-slide="next">&rsaquo;</a>
+   			   </div>
+   		  </section> 
+   	  </section>	 
+    </div>    
+
    </div>	
   </div>
- </div>
+</div>
+ 
 
 </body>
 </html>
