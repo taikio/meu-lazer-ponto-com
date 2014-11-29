@@ -6,6 +6,29 @@
  	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="bootstrap/css/menu.css">
  	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+
+  <style type="text/css">
+ #logo {
+
+  width: 280px;
+  height: 150px;
+  margin-top: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  margin-left: 15px;
+  padding: 1px;
+  float: left;
+  
+ }
+
+  #cabecalho {
+   float: left;
+   margin-left: 100px;
+   margin-top: 120px; 
+ }
+
+
+  </style>
  	
  </head>
   <body>
@@ -21,9 +44,14 @@
     <div class="row">
     
     
-    
+       <div id="logo">
 
-      <h1 class="text-uppercase text-primary">Meu Lazer.com</h1>&nbsp;&nbsp;<p class="text-primary">O melhor site de turismo de Caldas Novas!</p>
+          <img src="icons/logo.jpg" alt="Meu Lazer.com" width = "280" height = "150"/>
+
+       </div>
+
+
+      <h4 class="text-primary" id="cabecalho"><i>O melhor site de turismo de Caldas Novas!</i></h4>
       
 
     
@@ -48,9 +76,9 @@
     </li>
     <li><a href="#">Top Baladas</a>
        <ul>
-         <li><a href="#">Choperia Zero Grau</a></li>
-         <li><a href="#">Choperia Colizeu</a></li>
-         <li><a href="#">Estação 11</a></li>
+         <li><a href="#">Choperias</a></li>
+         <li><a href="#">Boates</a></li>
+         
        </ul>  
     </li>
     <li><a href="#">Contato&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>    

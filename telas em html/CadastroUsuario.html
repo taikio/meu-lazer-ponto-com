@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+
+    <script type="text/javascript" src="bootstrap/js/validacoesFomulario.js"/></script>
+
+    <title>CadastroUsuário</title>
+</head>
+
+    <body>
+
+    <div class="container">
+      
+        <div class="row-fluid">
+           <div class="span12">
+              &nbsp;
+           </div>
+      </div>
+    
+
+    <div class="row" id="main-content">
+    <div class="well" align="center">
+    <div class="span4" id="sidebar">
+    <h1 class="text-primary">Cadastro de Usuários</h1>
+
+    <form action="" id="cadastraUsuario">
+    <fieldset>
+        <legend></legend>
+
+            <input type="text" id="nome" placeholder="Nome Completo" class="form-control">
+            <input type="text" id="cpf" placeholder="CPF" class="form-control">
+            <input type="text" id="rg" placeholder="RG" class="form-control">
+            <input type="text" id="nacimento" placeholder="Data de nacimento" class="form-control">
+            <input type="text" id="endereco" placeholder="Endereço" class="form-control">
+            <input type="text" id="bairro" placeholder="Bairro" class="form-control">
+            <input type="text" id="cidade" placeholder="Cidade" class="form-control">
+            <input type="text" id="fone" placeholder="Celular" class="form-control">
+            <input type="text" id="telefone" placeholder="Telefone" class="form-control">
+            <input type="text" id="cargo" placeholder="Cargo" class="form-control">
+            <input type="text" id="email" placeholder="Email" class="form-control">
+            <input type="text" id="login" placeholder="Login" class="form-control">
+            <input type="password" id="password" placeholder="Senha" class="form-control">
+            <input type="password" id="chekedpassword" placeholder="Confirma Senha" class="form-control">
+<br>
+            <input type="submit" id="enviar" onclick=" return validaFormulario()" class="btn btn-primary" value="Salvar">&nbsp;&nbsp;&nbsp;
+            <input type="reset" class="btn btn-primary" value="Limpar">&nbsp;&nbsp;&nbsp;
+            <a href="#">Voltar</a>
+    </fieldset>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
