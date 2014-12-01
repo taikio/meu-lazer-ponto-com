@@ -26,8 +26,41 @@
     })
   </script>
 
+  <script type="text/javascript">
+    $ (function() {
+    $("#hospedagem1").jCarouselLite ({
+              btnPrev  : '.prev',
+              btnNext  : '.next',
+              auto     : 5000,
+              speed    : 1500,
+              visible  : 1,
+              });
+    });
+
+    $ (function() {
+    $("#hospedagem2").jCarouselLite ({
+              btnPrev  : '.prev',
+              btnNext  : '.next',
+              auto     : 5000,
+              speed    : 1500,
+              visible  : 1,
+              });
+    });
+
+    $ (function() {
+    $("#hospedagem3").jCarouselLite ({
+              btnPrev  : '.prev',
+              btnNext  : '.next',
+              auto     : 5000,
+              speed    : 1500,
+              visible  : 1,
+              });
+    });
+
+  </script>
+
  	<style type="text/css">
-    .banner {
+    #banner-principal {
     	float: left;
     	width: 900px;
     	height: 600px;
@@ -49,11 +82,39 @@
     	border-radius: 5px;
     }
 
-   #myCarousel ul{
+    #hospedagens {
+      float: left;
+      margin-top: 35px;
+      width: 100%;
+      height: 450px;
+    }
+
+    #hospedagem1 {
+      float: left;
+      
+      width: 360px;
+      height: 400px;
+    }
+
+    #hospedagem2 {
+      float: left;
+      margin-left: 30px;
+      width: 360px;
+      height: 400px;
+    }
+
+    #hospedagem3 {
+      float: left;
+      margin-left: 30px;
+      width: 360px;
+      height: 400px;
+    }    
+
+   #myCarousel,#hospedagem1,#hospedagem2,#hospedagem3 ul{
      list-style: none;
     }
  
-   #myCarousel ul li{
+   #myCarousel,#hospedagem1,#hospedagem2,#hospedagem3 ul li{
      float: left;
      display: inline; 
     }
@@ -77,12 +138,18 @@
     /*  position: top-right; */
      }
 
-     #descricao {
+     .descricao {
       width: 100%;
       height: 50px;
       font-family: "arial black";
       text-align: center;
       margin-bottom: 5px;
+     }
+
+     .categorias {
+       float: left;
+       border-bottom: 35px;
+       margin-top: 50px;
      }
 
  	</style>
@@ -110,10 +177,10 @@
          <a href="#" class="prev"><img src="icons/prev.jpg" width="30" height="30"></a>
        </div> 
 
-   	  <div class="banner">
+   	  <div id="banner-principal">
    	  
 
-         <div id="myCarousel" class="carousel slide"> 
+         <div id="myCarousel"> 
 
 
     
@@ -139,7 +206,7 @@
               <li> 
                 <figure>
                   <img src="model/img/<?php echo $imagem; ?>" alt="olho de gato"/>
-                    <div id="descricao">
+                    <div class="descricao">
                       <h3 class="text-primary"><?php echo "$titulo"; ?></h3>
                       <p class="text-primary"><?php echo "$descricao"; ?></p>
                     </div>            
@@ -158,9 +225,127 @@
        <div class="proximo">
          <a href="#" class="next"><img src="icons/next.jpg" width="30" height="30"></a>
        </div>
-    </div> 
+    </div>   
 
-  </div>
+
+   <div class="categorias">
+       <h2 class="text-primary"><i>Hospedagem</i></h2>
+       <span class="text-primary">______________________________________</span>
+   </div>
+
+
+   <div id="hospedagens">
+
+      
+
+     <div id="hospedagem1">
+     
+        <ul>
+       
+          <?php
+                   include('model/DAO.php');
+
+                   $busca = pg_query("SELECT * FROM anuncios");
+ 
+                   while ($result = pg_fetch_array($busca)) {
+
+                   $imagem = $result['nome'];   
+                   $titulo = $result['titulo'];
+                   $descricao = $result['descricao'];
+       
+          ?>
+
+
+            <li>
+              <figure>
+                  <img src="model/img/<?php echo $imagem; ?>" alt="olho de gato" width="350" height="300"/>
+                    <div class="descricao">
+                      <h3 class="text-primary"><?php echo "$titulo"; ?></h3>                      
+                    </div>            
+              </figure>
+            </li>
+
+            <?php
+                }
+            ?>  
+        </ul>
+
+     </div>
+
+
+     <div id="hospedagem2">
+     
+        <ul>
+       
+          <?php
+                   include('model/DAO.php');
+
+                   $busca = pg_query("SELECT * FROM anuncios");
+ 
+                   while ($result = pg_fetch_array($busca)) {
+
+                   $imagem = $result['nome'];   
+                   $titulo = $result['titulo'];
+                   $descricao = $result['descricao'];
+       
+          ?>
+
+
+            <li>
+              <figure>
+                  <img src="model/img/<?php echo $imagem; ?>" alt="olho de gato" width="350" height="300"/>
+                    <div class="descricao">
+                      <h3 class="text-primary"><?php echo "$titulo"; ?></h3>                      
+                    </div>            
+              </figure>
+            </li>
+
+            <?php
+                }
+            ?>  
+        </ul>
+
+     </div>
+
+
+     <div id="hospedagem3">
+     
+        <ul>
+       
+          <?php
+                   include('model/DAO.php');
+
+                   $busca = pg_query("SELECT * FROM anuncios");
+ 
+                   while ($result = pg_fetch_array($busca)) {
+
+                   $imagem = $result['nome'];   
+                   $titulo = $result['titulo'];
+                   $descricao = $result['descricao'];
+       
+          ?>
+
+
+            <li>
+              <figure>
+                  <img src="model/img/<?php echo $imagem; ?>" alt="olho de gato" width="350" height="300"/>
+                    <div class="descricao">
+                      <h3 class="text-primary"><?php echo "$titulo"; ?></h3>                      
+                    </div>            
+              </figure>
+            </li>
+
+            <?php
+                }
+            ?>  
+        </ul>
+
+     </div>     
+
+   </div>
+
+ </div>
+
 
  
 
