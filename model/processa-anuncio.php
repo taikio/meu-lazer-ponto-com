@@ -22,9 +22,9 @@ $pastaArquivo = $_FILES['foto']['tmp_name'];
   include('DAO.php');
    
 
-    $sql = "INSERT INTO anuncios(nome,titulo,descricao) VALUES('$imagem','$titulo','$descricao')"; 
+    @$sql = "INSERT INTO anuncios(nome,titulo,descricao) VALUES('$imagem','$titulo','$descricao')"; 
 
-    $cadastra = pg_exec($conn,$sql);
+    @$cadastra = pg_exec($conn,$sql);
 
     pg_close($conn);
 
